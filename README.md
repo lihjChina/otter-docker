@@ -16,9 +16,11 @@ clientPort=2181
 - To start zookeeper, `bin/zkServer.sh start`
 - To test if service running, `bin/zkCli.sh -server 127.0.0.1:2181`
 
-- [1.b install manager](https://github.com/alibaba/otter/wiki/Manager_Quickstart)
-- [1.c install node](https://github.com/alibaba/otter/wiki/Node_Quickstart)
-- [1.d  Hello world example](https://github.com/alibaba/otter/wiki/QuickStart)
+[1.b install manager](https://github.com/alibaba/otter/wiki/Manager_Quickstart)
+
+[1.c install node](https://github.com/alibaba/otter/wiki/Node_Quickstart)
+
+[1.d  Hello world example](https://github.com/alibaba/otter/wiki/QuickStart)
 
 ### 2. 使用docker创建mysql数据库测试环境
 ```
@@ -55,7 +57,7 @@ GRANT SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'canal'@'%';
 FLUSH PRIVILEGES;
 ```
 
-### 4. 数据筛选同步（拓展　EventProcessor）
+### 4. 数据筛选同步（拓展 EventProcessor）
 
 ``` java
 public class TestProcessor extends AbstractEventProcessor  {
