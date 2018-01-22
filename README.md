@@ -101,6 +101,9 @@ Caused by: com.alibaba.otter.node.etl.common.io.download.exception.DataRetrieveE
 ### 6. Docker Images
 
 - otter manager
+	```
+	docker run --name manager-test -e IP=127.0.0.1 -e PORT=8080 -e ZK_CLUSTER=127.0.0.1:2181 -p 8080:8080 otter-manager:1.0
+	```
 - otter node, 
 	```
 	docker run -d --name otter-node2 -e MANAGER=172.17.0.6:1099 -e NID=2 otter-node:1.0

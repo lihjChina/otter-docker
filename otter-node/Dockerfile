@@ -32,4 +32,5 @@ COPY start-otter-node.bash /opt/
 RUN chmod +x /opt/start-otter-node.bash
 WORKDIR /opt/otter-node
 
+EXPOSE 2088 9090 
 CMD ["/opt/start-otter-node.bash"]
