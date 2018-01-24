@@ -98,6 +98,10 @@ Caused by: com.alibaba.otter.node.etl.common.io.download.exception.DataRetrieveE
 ```
 > https://github.com/alibaba/otter/issues/78
 
+2. canal elapsed seconds no data 
+
+> https://github.com/alibaba/otter/issues?utf8=%E2%9C%93&q=canal+elapsed+seconds+no+data
+
 ### 6. Docker Images
 
 - otter manager
