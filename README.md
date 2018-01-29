@@ -119,3 +119,8 @@ Caused by: com.alibaba.otter.node.etl.common.io.download.exception.DataRetrieveE
 	```
 
 > utilize `docker logs` to debug
+
+> utilize `docker save & load for image` and `docker export & import for container`
+
+- docker save otter-manager:1.0 | gzip > ~/otter-manager-1.0.tar.gz
+- gzip -cd otter-manager-1.0.tar.gz | docker load
