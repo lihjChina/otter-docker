@@ -1,11 +1,9 @@
 #!/bin/bash -ex
 
 # if ENV set
-if [[ $(grep -w placeholder /opt/otter-manager/conf/otter.properties) ]]; then
-	if [[ -z ${IP+x} ]] || [[ -z ${PORT+x} ]] || [[ -z ${ZK_CLUSTER+x} ]]; then
-		echo 'unset ENV $IP & $PORT & $ZK_CLUSTER'
-		exit 1
-	fi
+if [[ -z ${IP+x} ]] || [[ -z ${PORT+x} ]] || [[ -z ${ZK_CLUSTER+x} ]]; then
+	echo 'unset ENV $IP & $PORT & $ZK_CLUSTER'
+	exit 1
 fi
 
 # magic of https://gist.github.com/ljfranklin/4a28740fbdfd86b896529f70be254768

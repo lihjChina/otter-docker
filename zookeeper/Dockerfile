@@ -15,5 +15,6 @@ RUN tar -zxf /opt/zookeeper-3.4.10.tar.gz -C /opt && chmod +x /opt/start-zk.bash
 COPY zoo.cfg /opt/zookeeper-3.4.10/conf/
 RUN mkdir /var/lib/zookeeper && touch /var/lib/zookeeper/myid
 
-EXPOSE 2181
+#VOLUME /opt/zookeeper-3.4.10/conf/zoo.cfg
+EXPOSE 2181 2888 3888
 CMD ["/opt/start-zk.bash"]

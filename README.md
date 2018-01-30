@@ -1,5 +1,11 @@
-
 ### build image
+
+1. [download jdk](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html): jdk-8u151-linux-x64.tar.gz && put into each subject folder(e.g. otter-manager)
+2. `cd otter-manager` && adjust `Dockerfile` if you need
+3. `docker build -t otter-manager:1.0 --rm=true .` to build 
+4. same for otter-node/zookeeper
+
+> `docker images -f "dangling=true" -q|xargs docker rmi` to remove dangling images
 
 ### create container
 - otter manager
@@ -14,6 +20,9 @@
 	```
 	# standalone
 	docker run -d --name zk-test zookeeper:1.0
+	
+	# cluster	
+	docker run -d -e ZK_ID=1 -v /path/to/zoo.cfg:/opt/zookeeper-3.4.10/conf/zoo.cfg --name zk-test1 zookeeper:1.0
 	```
 
 ### what't more
